@@ -1,0 +1,3 @@
+candidate_wmape,baseline_wmape,abs_diff_point,rel_imp_point_pct,ci_abs_lower_95,ci_abs_upper_95,ci_rel_lower_95_pct,ci_rel_upper_95_pct,method,block_length,n_replicates,candidate_model,baseline_model,population
+0.1652,0.2038,0.0385,18.91,0.0332,0.0442,16.88,21.07,moving_block_bootstrap,24,400,Ridge,Persistence,ELIGIBLE_SHIFTED
+0.1652,0.2038,0.0385,18.91,0.033,0.0441,16.44,21.28,naive_iid_resampling,1,400,Ridge,Persistence,ELIGIBLE_SHIFTED

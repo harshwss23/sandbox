@@ -1,0 +1,18 @@
+# The model /flc-run-solver runs against by default, and the agent it drives.
+#
+# Harbor rejects a bare model name -- it must be provider-prefixed, or the agent
+# exits with `ValueError: Model name must be in the format provider/model_name`.
+# A prefix that is well-formed but wrong gets past that check and is refused by
+# the gateway instead, which reports an unknown model and an unentitled one the
+# same way. The provider here is `meta_ai` -- not `meta`, and not `muse`.
+#
+# Set when the sandbox is built, and checked against what was shipped: while
+# this file differs, /flc-run-solver, /flc-deliver and submission refuse, and
+# /flc-restore-tools puts it back. Overriding on the command line (--model or
+# --agent) is for a one-off comparison: /flc-deliver refuses a run taken that way.
+#
+# What answers the run is checked rather than assumed: model_check.py reads the
+# model off the finished transcript and says so when it is not this one.
+
+model = anthropic/claude-opus-5
+agent = claude-code

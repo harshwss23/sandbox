@@ -1,0 +1,8 @@
+# Sites the solver must not reach.
+
+wikipedia.org
+wikiwand.com
+arxiv.org
+paperswithcode.com
+openreview.net
+huggingface.co

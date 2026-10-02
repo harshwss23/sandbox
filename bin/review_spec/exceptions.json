@@ -1,0 +1,282 @@
+[
+  {
+    "id": "nsc-trajectory",
+    "category": "Criteria Not Self Contained",
+    "source": "form",
+    "exception": "The response includes its trajectory, so a criterion about something the model did -- opened a file, viewed a figure, ran a script, wrote an output -- has a target.",
+    "enforced": "evidence",
+    "requires": [
+      "cannot_tell",
+      "would_consult"
+    ]
+  },
+  {
+    "id": "nsc-limited",
+    "category": "Criteria Not Self Contained",
+    "source": "notes",
+    "exception": "The Limited Exception: where listing every workspace value would be impractical, a supplementary criterion whose failure is captured by other self-contained criteria is not counted. The covering criteria are named; each must exist, be positive and carry no Not Self Contained finding of its own; the criterion must not carry the value the answer turns on.",
+    "enforced": "not_counted"
+  },
+  {
+    "id": "nsc-negative-class",
+    "category": "Criteria Not Self Contained",
+    "source": "boundary",
+    "exception": "A negative criterion naming a class of wrong claims is judged on its subject and on what puts a claim in the class, in its own words and the field's ordinary terms, not on an inventory of the class's members. A class fixed only by material the criterion does not identify is the defect.",
+    "enforced": "evidence",
+    "requires": [
+      "cannot_tell",
+      "would_consult"
+    ]
+  },
+  {
+    "id": "nsc-class-examples",
+    "category": "Criteria Not Self Contained",
+    "source": "project",
+    "exception": "A negative criterion naming a class of wrong claims and giving examples of its members -- (e.g. S03 at exactly 7.0) -- is self-contained: the examples show a grader what puts a claim in the class. A positive line still names its value.",
+    "enforced": "code"
+  },
+  {
+    "id": "atomic-identifying",
+    "category": "Criteria Not Atomic - Major",
+    "source": "form",
+    "exception": "A criterion that introduces an item and states what it is or does -- its function, its role, the reaction it catalyses -- is one thing, even where the name alone identifies the item; so is the name a file must carry or the unit a value is stated in. A further finding about the item that the response has to reach from the task's material stays a second part.",
+    "enforced": "evidence",
+    "requires": [
+      "part_a",
+      "part_b",
+      "splitting_response"
+    ]
+  },
+  {
+    "id": "atomic-one-wrong-claim",
+    "category": "Criteria Not Atomic - Major",
+    "source": "boundary",
+    "exception": "A negative criterion whose parts together describe one wrong claim has no part a response can satisfy on its own.",
+    "enforced": "evidence",
+    "requires": [
+      "part_a",
+      "part_b",
+      "splitting_response"
+    ]
+  },
+  {
+    "id": "atomic-major-once",
+    "category": "Criteria Not Atomic - Moderate",
+    "source": "form",
+    "exception": "A criterion carrying both a Major and a Moderate bundle is counted once, as Major; the identifying-property and one-wrong-claim exceptions apply here too.",
+    "enforced": "code"
+  },
+  {
+    "id": "overlap-proven",
+    "category": "Overlapping/Redundant Criteria",
+    "source": "form",
+    "exception": "An opposite-polarity pair is exempt when the negative is a proven hallucination: the negative fired against the graded run.",
+    "enforced": "code"
+  },
+  {
+    "id": "overlap-carryover",
+    "category": "Overlapping/Redundant Criteria",
+    "source": "notes",
+    "exception": "A criterion checking a value or verdict in the response and one checking that the same value or verdict is carried into an output file are not overlap in either direction; only the carryover's weight is judged, by the weights reading.",
+    "enforced": "code"
+  },
+  {
+    "id": "overlap-named-claim",
+    "category": "Overlapping/Redundant Criteria",
+    "source": "boundary",
+    "exception": "A negative naming a particular wrong claim -- a distractor, a wrong figure, a wrong route -- is not the positive stated the other way round, whether or not it fired.",
+    "enforced": "evidence",
+    "requires": [
+      "other_criterion",
+      "shared_element"
+    ]
+  },
+  {
+    "id": "overlap-conclusion",
+    "category": "Overlapping/Redundant Criteria",
+    "source": "boundary",
+    "exception": "A criterion drawing a conclusion from two others is not contained in them; a single criterion introducing and specifying related requirements is not overlap.",
+    "enforced": "evidence",
+    "requires": [
+      "other_criterion",
+      "shared_element"
+    ]
+  },
+  {
+    "id": "overfit-examples",
+    "category": "Overfitting and Underfitting",
+    "source": "form",
+    "exception": "Specific answers given as examples -- \"e.g.\", in parentheses, \"such as\" -- are allowed.",
+    "enforced": "evidence",
+    "requires": [
+      "rejected_answer"
+    ]
+  },
+  {
+    "id": "overfit-determined",
+    "category": "Overfitting and Underfitting",
+    "source": "boundary",
+    "exception": "Where the task's data determines a single answer, naming it is not overfit, for as long as the ground truth's answer holds: an answer resting on an inaccurate statement makes the criterion copying it an Incorrect Criteria finding instead. Requiring all of a set the ground truth lists is completeness; requiring the model to read the evidence is never overfit.",
+    "enforced": "evidence",
+    "requires": [
+      "rejected_answer"
+    ]
+  },
+  {
+    "id": "overfit-material-gap",
+    "category": "Overfitting and Underfitting",
+    "source": "boundary",
+    "exception": "A workspace supporting less than the ground truth asserts is a gap in the material, reported as one and not filed against the criterion.",
+    "enforced": "evidence",
+    "requires": [
+      "rejected_answer"
+    ]
+  },
+  {
+    "id": "overfit-convention",
+    "category": "Overfitting and Underfitting",
+    "source": "boundary",
+    "exception": "Precision pinned the same way across every numeric criterion is the task's own convention.",
+    "enforced": "evidence",
+    "requires": [
+      "rejected_answer"
+    ]
+  },
+  {
+    "id": "subjective-primary",
+    "category": "Subjective Criteria",
+    "source": "form",
+    "exception": "Judged on the criterion's primary requirement, and acceptable where the prompt is deliberately open-ended.",
+    "enforced": "evidence",
+    "requires": [
+      "qualifier"
+    ]
+  },
+  {
+    "id": "dense-one-reading",
+    "category": "Dense or Ambiguous Phrasing",
+    "source": "form",
+    "exception": "Long, technical or domain-heavy wording is fine while it has one reading; a value in a parenthetical that agrees with the material is clean.",
+    "enforced": "evidence",
+    "requires": [
+      "reading_a",
+      "reading_b",
+      "dividing_response"
+    ]
+  },
+  {
+    "id": "incorrect-checked",
+    "category": "Incorrect Criteria",
+    "source": "boundary",
+    "exception": "Judged against the task's material and a check that settles the fact, never against the ground truth taken as given: the ground truth is one of the files checked, and a criterion repeating an inaccurate statement of it is a factual error. The finding names that statement. A doubt no check can settle is a note and never counts.",
+    "enforced": "evidence",
+    "requires": [
+      "statement"
+    ]
+  },
+  {
+    "id": "incorrect-confirmed",
+    "category": "Incorrect Criteria",
+    "source": "project",
+    "exception": "An Incorrect Criteria finding counts only once three voters from different model families, each reading blind, all find its statement inaccurate. A statement that is not confirmed leaves the finding reported and not counted.",
+    "enforced": "code"
+  },
+  {
+    "id": "incorrect-specific-first",
+    "category": "Incorrect Criteria",
+    "source": "form",
+    "exception": "Before Incorrect Criteria, a more specific category is used.",
+    "enforced": "evidence"
+  },
+  {
+    "id": "missing-negative-covers",
+    "category": "Missing Criteria - Critical Requirements",
+    "source": "boundary",
+    "exception": "A negative criterion covers the requirement it guards; a requirement a unit test asserts is covered.",
+    "enforced": "evidence",
+    "requires": [
+      "prompt_quote"
+    ]
+  },
+  {
+    "id": "missing-spot-checks",
+    "category": "Missing Criteria - Critical Requirements",
+    "source": "form",
+    "exception": "A spot-checked group counts once, never per member or per column.",
+    "enforced": "code"
+  },
+  {
+    "id": "missing-annotation-committed",
+    "category": "Missing Criteria - Critical Requirements",
+    "source": "boundary",
+    "exception": "A hallucination annotation is a wrong claim the run actually made. The quoted claim must be in the run's answer; an anticipated trap the run never fell for is not a missing criterion.",
+    "enforced": "code"
+  },
+  {
+    "id": "missing-reason-clears",
+    "category": "Missing Criteria - Non-critical Requirements",
+    "source": "boundary",
+    "exception": "Where a reason the rubric needs no such criterion can be stated, the requirement is covered. The requirement is quoted from the prompt.",
+    "enforced": "evidence",
+    "requires": [
+      "prompt_quote"
+    ]
+  },
+  {
+    "id": "weights-band",
+    "category": "Incorrect Weights - Minor",
+    "source": "boundary",
+    "exception": "A weight one step from the reviewer's own pricing is inside the band; each criterion is priced on its own content, never against a budget for the criteria covering one ask.",
+    "enforced": "evidence",
+    "requires": [
+      "bucket",
+      "proposed_weight"
+    ]
+  },
+  {
+    "id": "weights-carryover",
+    "category": "Incorrect Weights - Minor",
+    "source": "notes",
+    "exception": "A value already checked by a +5 criterion may be carried into an artifact check at +3 without penalty.",
+    "enforced": "code"
+  },
+  {
+    "id": "weights-major-as-moderate",
+    "category": "Incorrect Weights - Major",
+    "source": "form",
+    "exception": "A two-step weight error counts as a moderate issue in the overall total.",
+    "enforced": "code"
+  },
+  {
+    "id": "generality-origin",
+    "category": "Rubric Criteria - Hallucination Generality",
+    "source": "notes",
+    "exception": "Counted only where the wrong answers the criterion names were taken from the run: its particulars appear in the graded run's answer. An escapable criterion not copied from the run is reported and never counted.",
+    "enforced": "code"
+  },
+  {
+    "id": "generality-covered",
+    "category": "Rubric Criteria - Hallucination Generality",
+    "source": "form",
+    "exception": "An escape another criterion penalises is covered, and not counted. The covering criterion must exist in the rubric.",
+    "enforced": "code"
+  },
+  {
+    "id": "generality-values",
+    "category": "Rubric Criteria - Hallucination Generality",
+    "source": "notes",
+    "exception": "Naming specific values is acceptable; a value or set the task's material settles is the class boundary.",
+    "enforced": "evidence",
+    "requires": [
+      "particular",
+      "escape"
+    ]
+  },
+  {
+    "id": "double-negative-weight",
+    "category": "Double Negative",
+    "source": "form",
+    "exception": "Only a negative criterion can be a double negative.",
+    "enforced": "code"
+  }
+]

@@ -1,0 +1,2 @@
+dataset_name,total_rows,start_timestamp,end_timestamp,total_hours,zones,products,price_mean_usd,price_std_usd,price_min_usd,price_max_usd,simulated_flag
+market_clearing_observations.csv,26280,2023-01-01 00:00:00,2025-12-30 23:00:00,26280,"NP15,SP15,ZP26","FIRM_DAY_AHEAD,STANDBY_RESERVE",66.99,23.75,4.58,474.88,True

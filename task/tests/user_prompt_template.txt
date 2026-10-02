@@ -1,0 +1,16 @@
+# Prompt
+{problem_statement}
+
+# Response
+{model_answer}
+
+# Files the model produced
+{outputs}
+
+# Transcript of what the model did
+{trajectory}
+
+# Rubric Criterion
+{{
+  "rubric_statement": {title}
+}}

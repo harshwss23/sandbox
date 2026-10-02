@@ -1,0 +1,39 @@
+seed: 101
+total_hours: 26280
+start_timestamp: "2023-01-01 00:00:00"
+time_zone: "America/Los_Angeles"
+zones:
+  - "NP15"
+  - "SP15"
+  - "ZP26"
+splits:
+  train:
+    start_hour: 0
+    end_hour: 8759
+    total_hours: 8760
+    description: "Year 1 baseline training period"
+  validation:
+    start_hour: 8760
+    end_hour: 17519
+    total_hours: 8760
+    description: "Year 2 model selection / tuning period"
+  test_pre_shift:
+    start_hour: 17520
+    end_hour: 21899
+    total_hours: 4380
+    description: "Year 3 H1 pre-shift testing period"
+  test_shifted:
+    start_hour: 21900
+    end_hour: 26279
+    total_hours: 4380
+    description: "Year 3 H2 post-shift distribution testing period"
+
+simulation_parameters:
+  base_gas_price_mmbtu: 3.50
+  shifted_gas_price_adder: 2.20
+  carbon_price_adder_shifted: 1.15
+  solar_capacity_mw_preshift: 95.0
+  solar_capacity_mw_shifted: 165.0
+  heat_rate_base: 8.5
+  outage_rate: 0.03
+  maintenance_rate: 0.01

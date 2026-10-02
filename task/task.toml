@@ -1,0 +1,35 @@
+schema_version = "1.1"
+
+[task]
+name = "flc/task-17ec76a44a7148509a9fa318"
+description = ""
+authors = []
+keywords = []
+
+[metadata]
+
+[verifier]
+timeout_sec = 3090.0
+
+[agent]
+timeout_sec = 10800.0
+
+[environment]
+build_timeout_sec = 1800.0
+cpus = 4
+memory_mb = 16384
+storage_mb = 20480
+gpus = 0
+allow_internet = true
+mcp_servers = []
+
+[verifier.env]
+EVAL_API_KEY = "${OPENAI_API_KEY}"
+EVAL_BASE_URL = "${OPENAI_API_BASE}"
+EVAL_MODEL = "${EVAL_MODEL:-anthropic/claude-opus-4-5-20251101}"
+FLC_DEFER_GRADING = "${FLC_DEFER_GRADING:-0}"
+FLC_GRADE_NOW = "${FLC_GRADE_NOW:-0}"
+
+[environment.env]
+
+[solution.env]

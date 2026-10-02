@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+# Install a task's extra packages during the image build.
+#
+# Reads the file given as $1. One package per line, blank lines and `#` comments
+# ignored, each line prefixed with its ecosystem:
+#
+#   pip scanpy==1.10.3
+#   apt libgeos-dev
+#   r   ComplexHeatmap
+#
+# An empty or missing file exits 0 without touching the image.
+
+set -euo pipefail
+
+file="${1:-}"
+if [ -z "$file" ] || [ ! -f "$file" ]; then
+  echo "flc-install-packages: nothing to install"
+  exit 0
+fi
+
+pips=()
+apts=()
+rs=()
+
+while IFS= read -r line || [ -n "$line" ]; do
+  line="${line%%#*}"
+  line="$(printf '%s' "$line" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+  [ -n "$line" ] || continue
+
+  kind="${line%%[[:space:]]*}"
+  spec="${line#"$kind"}"
+  spec="$(printf '%s' "$spec" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+  if [ -z "$spec" ]; then
+    echo "flc-install-packages: line has an ecosystem but no package: $line" >&2
+    exit 1
+  fi
+
+  case "$kind" in
+    pip) pips+=("$spec") ;;
+    apt) apts+=("$spec") ;;
+    r|R) rs+=("$spec") ;;
+    *)
+      echo "flc-install-packages: unknown ecosystem '$kind' (expected pip, apt or r): $line" >&2
+      exit 1 ;;
+  esac
+done < "$file"
+
+if [ "${#apts[@]}" -gt 0 ]; then
+  echo "flc-install-packages: apt -> ${apts[*]}"
+  apt-get update
+  DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends "${apts[@]}"
+  rm -rf /var/lib/apt/lists/*
+fi
+
+if [ "${#pips[@]}" -gt 0 ]; then
+  echo "flc-install-packages: pip -> ${pips[*]}"
+  pip3 install --no-cache-dir "${pips[@]}"
+fi
+
+if [ "${#rs[@]}" -gt 0 ]; then
+    echo "flc-install-packages: R -> ${rs[*]}"
+    # BiocManager::install falls through to CRAN for a package Bioconductor does
+    # not carry, so one call covers both repositories. The name is read back
+    # with commandArgs rather than pasted into the R expression.
+    for pkg in "${rs[@]}"; do
+    R --quiet --no-save --args "$pkg" <<'R_SCRIPT'
+pkg <- commandArgs(trailingOnly = TRUE)[1]
+BiocManager::install(pkg, ask = FALSE, update = FALSE)
+if (!requireNamespace(pkg, quietly = TRUE)) quit(status = 1)
+R_SCRIPT
+  done
+fi
+
+echo "flc-install-packages: done"

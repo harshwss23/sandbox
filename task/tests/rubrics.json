@@ -1,0 +1,498 @@
+[
+  {
+    "criteria": "Response identifies Ridge as the model selected under the predeclared Year 2 validation rules.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Ridge's final validation WMAPE is approximately 0.1306.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Ridge's final validation relative improvement over Persistence is approximately 18.17%.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Ridge's final validation spike recall is approximately 0.1639.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Ridge's final validation volatile degradation ratio is approximately -0.2519.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Persistence fails the validation improvement requirement.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states HistGradientBoosting passes the final-validation improvement requirement.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states HistGradientBoosting fails the final-validation spike-recall requirement.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response identifies the governing post-shift comparison population as FIRM_DAY_AHEAD observations with telemetry_status == NORMAL, or uses equivalent wording that unambiguously identifies those same codes and population.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response gives the final deployment decision as REJECT.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states eligible post-shift Persistence WMAPE is approximately 0.2038.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states that Ridge's WMAPE on the eligible population increased from approximately 0.1361 pre-shift to approximately 0.1652 post-shift.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response eports the observed improvement as approximately 18.91%",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states the applicable requirement separately as an 18.0% minimum improvement.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Gate 1 passes.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Gate 2 uses the frozen pre-shift P95 spike threshold of approximately 101.895.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states the governing Gate 2 spike recall is the micro/interval-level recall of approximately 0.2957.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states the Gate 2 spike-recall requirement is 0.280.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Gate 2 passes.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports approximately 230 actual spikes in the eligible post-shift population.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports approximately 83 predicted spikes in the eligible post-shift population.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports eligible post-shift spike precision of approximately 0.8193.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports eligible post-shift spike F1 of approximately 0.4345.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states SP15 eligible post-shift zonal WMAPE is approximately 0.1582.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states ZP26 eligible post-shift zonal WMAPE is approximately 0.1632.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Gate 3 is an absolute ceiling on post-shift WMAPE in each individual zonal delivery hub.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports NP15 as approximately 0.1740",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states the applicable NP15 ceiling separately as 0.170",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Gate 3 fails.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response identifies ZP26 x SPIKE as the worst conditional zone-by-regime cell.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports ZP26 x SPIKE WMAPE of approximately 0.4303.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports ZP26 x SPIKE MAE of approximately 64.3252.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states ZP26 x SPIKE is diagnostic, not gate-determining.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states that portfolio WMAPE of approximately 0.1652 cannot show Gate 3 compliance.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response identifies the governing uncertainty procedure as a dependence-aware 24-hour moving-block bootstrap.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states the moving-block bootstrap uses 400 replicates.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports the moving-block relative-improvement point estimate as approximately 18.91%.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports the moving-block 95% confidence interval as approximately [16.88%, 21.07%].",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Gate 4 passes under the recorded moving-block bootstrap result.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response reports the naive IID-bootstrap 95% lower bound as approximately 16.44%.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response explains that the IID result would place the lower bound below the 16.60% Gate 4 threshold.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states that block resampling preserves the serial dependence in hourly forecast errors that IID resampling discards.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response cites a peer-reviewed statistics article or published statistics monograph supporting block/dependence-aware resampling.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response explains that the preliminary RandomForest result belongs to the earlier base_no_interaction experiment vintage.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response explains that the governing final validation uses the later full_operational_v2 feature specification.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states final-validation RandomForest improvement is approximately 12.84%.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states RandomForest fails Rule 1.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states final-validation RandomForest spike recall is approximately 0.1047.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states RandomForest fails Rule 2.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Ridge's broad pooled post-shift relative improvement over Persistence is approximately 15.10%.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states Ridge's broad pooled post-shift spike recall is approximately 0.1872.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response explains that pooled results do not govern because they include STANDBY_RESERVE and/or non-normal telemetry rather than the commercially comparable eligible population.",
+    "weight": 5,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response identifies approximately 123.641 as the ex-post post-shift P95 threshold rather than the frozen governing spike threshold.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states using the ex-post threshold produces Ridge spike recall of approximately 0.2222.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states macro-zonal spike recall is approximately 0.2772.",
+    "weight": 1,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states macro-zonal spike recall does not govern Gate 2.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states model selection was frozen on the predeclared Year 2 validation split and that post-shift results are used only to assess the frozen selected model rather than to re-select a model retrospectively.",
+    "weight": 3,
+    "type": [
+      "task completion",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response alters the governing Gate 4 test by treating self-computed sensitivity analyses-such as alternate random seeds or block lengths, as part of the governing Gate 4 decision",
+    "weight": -3,
+    "type": [
+      "hallucination",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response uses a volatile-regime threshold other than the governing value 23.5562 for regime classification.",
+    "weight": -1,
+    "type": [
+      "hallucination",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response treats broad pooled post-shift results as governing the deployment decision instead of the eligible FIRM_DAY_AHEAD observations with NORMAL telemetry.",
+    "weight": -5,
+    "type": [
+      "hallucination",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response claims that reported zonal volumne shares confirm the zonal composition memo when those reported shares differ materially from the memo's stated shares.",
+    "weight": -3,
+    "type": [
+      "hallucination",
+      "user facing"
+    ]
+  },
+  {
+    "criteria": "Response states a recomputed volatile-regime threshold that is unsupported by the task files and differs from the governing threshold of approximately 23.5562",
+    "weight": -3,
+    "type": [
+      "hallucination",
+      "user facing"
+    ]
+  }
+]

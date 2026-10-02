@@ -1,0 +1,5 @@
+model_name,run_id,vintage,feature_set,MAE,RMSE,WMAPE,R2,count
+Persistence,persistence_v0,preliminary_v1,base_no_interaction,11.5544,22.3017,0.1596,-0.0682,8760
+Ridge,ridge_v0,preliminary_v1,base_no_interaction,9.556,17.9305,0.132,0.3095,8760
+RandomForest,random_forest_v0,preliminary_v1,base_no_interaction,9.4243,17.9326,0.1302,0.3093,8760
+HistGradientBoosting,hist_gradient_boosting_v0,preliminary_v1,base_no_interaction,9.837,18.3089,0.1359,0.2801,8760

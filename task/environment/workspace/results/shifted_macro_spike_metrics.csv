@@ -1,0 +1,5 @@
+macro_spike_recall,macro_spike_precision,zonal_recalls,model_name,run_id
+0.5424,0.3594,"[0.5556, 0.5955, 0.4762]",Persistence,persistence_v1
+0.2772,0.798,"[0.2929, 0.3483, 0.1905]",Ridge,ridge_reg_v1
+0.2982,0.6562,"[0.3333, 0.3708, 0.1905]",RandomForest,random_forest_v1
+0.2978,0.7125,"[0.3333, 0.3933, 0.1667]",HistGradientBoosting,hist_gradient_boosting_v1

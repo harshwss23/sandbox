@@ -1,0 +1,20 @@
+Put your task's files into this folder.
+
+The quickest way, and the only one that keeps your folder structure intact:
+
+  1. On your computer, compress your files into a single .zip
+  2. Upload that one zip into this folder, using the file browser on the left
+  3. Go back to Claude Code and type:  /flc-unpack
+
+That unpacks it, deletes the zip, and clears out the hidden files your computer
+tucks into archives. Nothing of yours is renamed or moved around.
+
+Everything here becomes /workspace inside the model's machine. Whatever
+structure you make here is the structure the model sees, so lay it out the way
+it would really look on someone's computer -- folders like data/, notes/,
+Downloads/, old_projects/ read as real; a flat pile of files does not.
+
+Include the distractors too. A folder containing only the files needed to
+answer the question is not the task this project is trying to build.
+
+This file disappears on its own once your own files are in.

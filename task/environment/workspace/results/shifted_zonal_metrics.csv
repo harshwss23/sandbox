@@ -1,0 +1,13 @@
+model_name,run_id,zone,MAE,RMSE,WMAPE,R2,count
+Persistence,persistence_v1,NP15,15.1981,29.4939,0.2099,0.0921,1356
+Persistence,persistence_v1,SP15,14.0877,26.055,0.1992,0.0335,1493
+Persistence,persistence_v1,ZP26,14.2103,29.0001,0.2016,-0.0273,826
+Ridge,ridge_reg_v1,NP15,12.5931,25.6309,0.174,0.3143,1356
+Ridge,ridge_reg_v1,SP15,11.1905,20.786,0.1582,0.3849,1493
+Ridge,ridge_reg_v1,ZP26,11.5062,25.7423,0.1632,0.1905,826
+RandomForest,random_forest_v1,NP15,13.5453,25.7293,0.1871,0.3091,1356
+RandomForest,random_forest_v1,SP15,12.1596,21.1932,0.1719,0.3606,1493
+RandomForest,random_forest_v1,ZP26,12.6269,26.1147,0.1791,0.167,826
+HistGradientBoosting,hist_gradient_boosting_v1,NP15,13.3807,26.3003,0.1848,0.2781,1356
+HistGradientBoosting,hist_gradient_boosting_v1,SP15,11.9787,21.6776,0.1694,0.331,1493
+HistGradientBoosting,hist_gradient_boosting_v1,ZP26,12.2809,26.2121,0.1742,0.1607,826

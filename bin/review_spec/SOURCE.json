@@ -1,0 +1,33 @@
+{
+  "commit": "a2de3ce36748d95131eab4525172563fe17e1c34",
+  "ballot_version": 2,
+  "category_digests": {
+    "Missing Criteria - Critical Requirements": "b19615bb905624edf6d189f6dc384def66270f1122bf0a0f38791033b08c3fdb",
+    "Missing Criteria \u2014 Non-critical Requirements": "03d30105b9212e25859b089282def698164da33c0b22fa061794b787f1a957cf",
+    "Criteria Not Self Contained": "927cd348381051489219f84ab9e953f061e4ca042aed1722ab215bf3386a5269",
+    "Criteria Not Atomic - Major": "5121adc2b43f60d4a0364aa13730318f954ab33e5585351439f6b7ba5775bb5e",
+    "Criteria Not Atomic - Moderate": "5121adc2b43f60d4a0364aa13730318f954ab33e5585351439f6b7ba5775bb5e",
+    "Subjective Criteria": "496b2b3f1be3af0d01518fd38e527f2db2ea3aeb1efd6fca1469e448980a0e09",
+    "Double Negative": "aa0eab7ea9b68e530fc3c6fe9afb80a3423c08ce578431a358c04a8b72cf4a8b",
+    "Dense or Ambiguous Phrasing": "14b96c35aac581aa4d1e840a7fdecd65a36cbec526ca8fbcee74ef7b9c3fcaf6",
+    "Incorrect Criteria": "7931695512bda0cb64443082e917daa41c97728a501910666cfa18ec39db797b",
+    "Overfitting and Underfitting": "11e3a134f6bd44d34252d5be3b2957de3206e87cdb7fe1f0b882acc6cd275688",
+    "Overlapping/Redundant Criteria": "6a0fe450215c15d4d5a702c6beed9651b899c5d32fda1d8d5ca69097a6c4a8fc",
+    "Incorrect Weights - Major": "42aaf3dae1848f1c54d97a601e331925e86b9b869229e7d5345db086e54e478d",
+    "Incorrect Weights - Minor": "82cb349dc853b374e83b428a502ca5d24a87ce8a2fdfa026085484b4707b46f9",
+    "Rubric Criteria - Hallucination Generality": "560fe26d6ef7e4dedc5c256d689d1144bc94b5bc2175825e22b246feea091502",
+    "Statements contract": "638938dea7b9dafb907dd4b0f97292e2aa50d7d76d18352daf24ddd9a5f0841f",
+    "Voter instructions": "295c14656a0ba7bb4afa37752acc9eb193f6cfb48872616596cff5b0473be0b3"
+  },
+  "files": {
+    "categories.json": "3e211297ff42228f1e4f080eaafaa32be641193515ecffff2e64e4284b5e261a",
+    "exceptions.json": "ac7e762bcba01d5a5d4033052c99e64ab2de41b31d155fb23ef079a1e5891d2b",
+    "generality.json": "3d0de97437b3bce8e24a2ab24e817c4c6181cc63c106fea0fb9aaf86c9424bc4",
+    "justification_method.md": "38f868aff5112afb2998527be3cdd09f7a1acb365fd761447eeae31aa7f2ab0a",
+    "naming.md": "5fcf601ab009ed5d48cf6961a97cd6f9ae813c999a77d4d88cb3c45a6ed7f8c3",
+    "preamble.md": "7183f62b15fe5ddd1ef9c1e0f74070b6dc272065623d409bb9c55d5b8d3632db",
+    "statements.md": "44c121b423a8edf411099f67693c3465f02ea2d276f0030400e7b32950cc1cc9",
+    "vote.md": "de9c4fb7f926ea237336af1819c31e74cb0c91abdeb1788ab719cd132777e031",
+    "weights.md": "86280083fed2349aa7f6a5e96d93f32fcea0b817f7323620da9018a82f8bce9a"
+  }
+}

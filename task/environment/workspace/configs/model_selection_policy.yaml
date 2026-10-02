@@ -1,0 +1,46 @@
+governance_framework: "Energy Trading & Risk Analytics (ETRA) Standards Board"
+document_id: "POL-ETRA-2025-V2"
+effective_date: "2025-01-01"
+review_stage: "Automated Gate & Production Deployment Policy"
+
+section_1_model_selection_protocol:
+  description: "Rules governing the selection of the primary candidate from the development phase (Year 2 Validation)."
+  eligibility_requirements:
+    rule_1_relative_wmape_improvement:
+      description: "Candidate model must achieve at least a 15.0% relative WMAPE improvement over the Persistence baseline on the validation set."
+      threshold_pct: 15.0
+    rule_2_spike_sensitivity:
+      description: "Candidate model must achieve at least 0.15 spike recall under the training-frozen 95th percentile spike threshold."
+      threshold_recall: 0.15
+    rule_3_volatility_containment:
+      description: "The candidate volatile-regime degradation ratio must not exceed 0.50 (i.e. volatile WMAPE <= 1.50 * overall WMAPE)."
+      max_degradation_ratio: 0.50
+  selection_criterion: "Among all candidates satisfying Rules 1, 2, and 3, designate the candidate with the lowest overall validation WMAPE as the selected candidate."
+
+section_2_post_shift_deployment_gates:
+  description: "Mandatory criteria that the selected candidate must satisfy during the post-shift evaluation period (Year 3 H2 Shifted) prior to production deployment authorization."
+  governing_population:
+    requirement: "All deployment gates must be evaluated strictly on the Eligible Operational Population (Firm Day-Ahead delivery with telemetry_status == 'NORMAL'). Pooled operational populations containing non-firm standby overrides or unvalidated telemetry must be excluded to prevent dispatch distortion."
+  
+  mandatory_gates:
+    gate_1_post_shift_improvement:
+      metric: "Relative WMAPE improvement over Persistence baseline on the post-shift evaluation period."
+      minimum_threshold_pct: 18.0
+      rationale: "Ensures the forecasting edge is commercially meaningful after fundamental market regime changes."
+
+    gate_2_spike_recall:
+      metric: "Micro-averaged (interval-level) spike recall evaluated under the pre-shift frozen baseline threshold (P95 of Training period)."
+      minimum_threshold_recall: 0.28
+      warning: "Spike recall evaluated using dynamically updated or leaked post-shift thresholds is strictly non-compliant."
+
+    gate_3_macro_zone_stability:
+      metric: "Absolute ceiling on post-shift WMAPE in each individual zonal delivery hub (NP15, SP15, ZP26); no single zone may exceed maximum_zonal_wmape."
+      maximum_zonal_wmape: 0.170
+      rationale: "Prevents localized catastrophic degradation that could be masked by pooled portfolio weighting."
+
+    gate_4_statistical_uncertainty:
+      metric: "Lower bound of the 95% confidence interval for relative WMAPE improvement over Persistence."
+      minimum_ci_lower_bound_pct: 16.60
+      methodological_standard: "Uncertainty intervals must account for temporal autocorrelation and diurnal clustering via dependence-aware moving/block resampling (Block length = 24 hours, minimum 400 replicates). Naive independent-observation resampling is prohibited by risk governance."
+
+  final_decision_rule: "A model is APPROVED for production deployment IF AND ONLY IF all four mandatory gates (Gates 1, 2, 3, and 4) are simultaneously satisfied. If any gate fails, the deployment recommendation is REJECT."

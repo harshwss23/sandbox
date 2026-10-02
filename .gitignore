@@ -1,0 +1,12 @@
+.local/
+.claude/
+.proxy/
+.DS_Store
+*.log
+__pycache__/
+*.py[cod]
+jobs/
+task/.flc/
+task/review/
+task/tests/verifier.py.skipped
+*.zip

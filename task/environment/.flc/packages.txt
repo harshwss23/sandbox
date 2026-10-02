@@ -1,0 +1,14 @@
+# Extra packages for this task, one per line, prefixed with pip,
+# apt or r.
+
+pip pandas
+pip numpy
+pip openpyxl
+pip chardet
+pip scikit-learn
+pip statsmodels
+pip pillow
+pip opencv-python-headless
+pip matplotlib
+apt libgl1
+apt libglib2.0-0

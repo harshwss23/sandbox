@@ -1,0 +1,35 @@
+{
+  "domain": "ai_ml",
+  "label": "AI/ML/Computer Vision/Computational Statistics",
+  "variant": "full",
+  "seed_version": "v47",
+  "solver_model": "anthropic/claude-opus-5",
+  "difficulty_bar": true,
+  "max_solver_reward": 0.5,
+  "base_image": "python:3.12-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2",
+  "base_image_ref": "python:3.12-slim-bookworm",
+  "pip": [
+    "pandas",
+    "numpy",
+    "openpyxl",
+    "chardet",
+    "scikit-learn",
+    "statsmodels",
+    "pillow",
+    "opencv-python-headless",
+    "matplotlib"
+  ],
+  "apt": [
+    "libgl1",
+    "libglib2.0-0"
+  ],
+  "r": [],
+  "blocked_domains": [
+    "wikipedia.org",
+    "wikiwand.com",
+    "arxiv.org",
+    "paperswithcode.com",
+    "openreview.net",
+    "huggingface.co"
+  ]
+}

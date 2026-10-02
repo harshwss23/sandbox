@@ -1,0 +1,8 @@
+model_family: "Regularized Linear (Ridge)"
+run_id: "ridge_reg_v1"
+alpha: 10.0
+fit_intercept: true
+standardize_inputs: true
+random_state: 42
+feature_set: "full_operational_v2"
+target: "price"
