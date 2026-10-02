@@ -1,0 +1,18 @@
+# Dispatch Telemetry Audit Log
+
+================================================================================
+SYSTEM LOG: CAL-ISO WESTERN INTERCONNECTION SCADA FEED
+PERIOD: 2023-01-01 THROUGH 2025-12-30
+================================================================================
+
+[2023-01-01 00:00:00 PST] Telemetry gateway online. Listening on nodes NP15, SP15, ZP26.
+[2023-03-14 02:00:00 PST] NP15 Substation B transducer inspection. 14 intervals flagged as MAINTENANCE.
+[2023-07-20 16:00:00 PST] Flex Alert Level 2 declared. STANDBY_RESERVE capacity activated across SP15 basin. Administrative penalty cap floor applied to reserve bids ($250.00/MWh).
+[2024-02-11 08:00:00 PST] SCADA gateway failover to secondary microwave link. 28 intervals marked as ESTIMATED.
+[2024-09-05 17:00:00 PST] Record heatwave event across Southern California. Out-of-market standby generation dispatched. Standby settlements diverged from core Day-Ahead clearing.
+[2025-01-01 00:00:00 PST] Year 3 Phase Begins. Carbon border adjustment mechanism (CBAM) adder integrated into wholesale gas heat rates.
+[2025-06-15 12:00:00 PST] Duck curve depth reaches seasonal peak in ZP26. Utility-scale solar capacity addition (+70 MW) causes steep midday net-load depression followed by extreme 3-hour evening ramp.
+[2025-12-30 23:00:00 PST] Telemetry audit concluding. Total operational hours recorded: 26,280. Total firm commercial delivery intervals: 22,467 (85.49%). Non-firm standby / degraded telemetry intervals: 3,813 (14.51%).
+================================================================================
+AUDIT DIRECTIVE: Risk Management Board confirms that non-firm standby intervals contain administrative pricing floors and must be filtered out when testing forecasting models for production deployment.
+================================================================================
